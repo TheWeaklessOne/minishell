@@ -69,10 +69,10 @@ char		**ft_strsplit(char const *s, char c)
 	int		k;
 
 	if (!s)
-		return (NULL);
+		return (on_crash(NULL_ERR));
 	n = ft_str(s, c);
 	if (!(d = (char **)malloc(sizeof(char *) * (n + 1))))
-		return (NULL);
+		return (on_crash(MALLOC_ERR));
 	d[n] = NULL;
 	i = -1;
 	j = 0;

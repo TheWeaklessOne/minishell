@@ -5,6 +5,8 @@
 # define PROMPT "$> "
 
 # define MALLOC_ERR 1
+# define NULL_ERR 2
+
 # include <unistd.h>
 # include <stdlib.h>
 

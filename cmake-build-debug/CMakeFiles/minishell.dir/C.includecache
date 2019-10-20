@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
+unistd.h
+-
+stdlib.h
+-
+
+/Users/wstygg/Desktop/minishell/Sources/commands.c
+../Includes/minishell.h
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
+
+/Users/wstygg/Desktop/minishell/Sources/exit.c
+../Includes/minishell.h
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
+
+/Users/wstygg/Desktop/minishell/Sources/ft.c
+../Includes/minishell.h
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
+
+/Users/wstygg/Desktop/minishell/Sources/ft_strsplit.c
+../Includes/minishell.h
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
+
+/Users/wstygg/Desktop/minishell/Sources/minishell.c
+../Includes/minishell.h
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
+

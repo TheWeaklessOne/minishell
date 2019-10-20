@@ -33,13 +33,13 @@ void			do_command(char *command)
 	pid_t		pid;
 
 	args = ft_strsplit(command, ' ');
-	if (check_command(args[0]))
+	if (args && *args && check_command(args[0]))
 		if (!(pid = fork()))
 		{
 			args[0] = ft_strjoin("/bin/", args[0], 2);
 			execv(args[0], args);
-			free(args);
 		}
+	free(args);
 	wait(&pid);
 }
 

@@ -11,7 +11,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5594a05-1377-49d4-a05d-7791ea25ab9b" name="Default Changelist" comment="" />
+    <list default="true" id="e5594a05-1377-49d4-a05d-7791ea25ab9b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/commands.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/exit.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/ft.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/ft_strsplit.c" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/ft_strsplit.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/ft_strsplit.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/minishell.c" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/minishell.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/minishell.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minishell" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +37,9 @@
   </component>
   <component name="ProjectId" id="1STPlE4H9LUuGs1l8qRMijtF8Uh" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -59,6 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571584760262</updated>
       <workItem from="1571584761587" duration="6000" />
+      <workItem from="1571586632629" duration="248000" />
     </task>
     <servers />
   </component>
@@ -70,7 +83,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
