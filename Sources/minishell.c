@@ -6,7 +6,7 @@
 /*   By: wstygg <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/19 17:51:03 by wstygg            #+#    #+#             */
-/*   Updated: 2019/10/19 17:51:04 by wstygg           ###   ########.fr       */
+/*   Updated: 2019/10/20 18:32:16 by wstygg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int				main(int ac, char *av[])
 	char		*command;
 	char		c;
 
+	system("clear");
 	command = command_renew(&command, 0);
 	while (read(1, &c, 1) && c != 'q')
 	{
