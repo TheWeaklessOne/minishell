@@ -1,10 +1,10 @@
 #include "../Includes/minishell.h"
 
-static int	ft_str(const char *s, char c)
+int			ft_str(const char *s, char c)
 {
-	int i;
-	int n;
-	int k;
+	int		i;
+	int		n;
+	int		k;
 
 	i = 0;
 	n = 0;
@@ -23,12 +23,12 @@ static int	ft_str(const char *s, char c)
 	return (n);
 }
 
-static char	**ft_f(const char *s, char **d, char c)
+char		**ft_f(const char *s, char **d, char c)
 {
-	int i;
-	int n;
-	int j;
-	int k;
+	int		i;
+	int		n;
+	int		j;
+	int		k;
 
 	i = 0;
 	n = 0;
@@ -52,11 +52,19 @@ static char	**ft_f(const char *s, char **d, char c)
 	return (d);
 }
 
-static char	**ft_free(char **d, int i)
+char		**ft_free_split(char **d, int crash)
 {
-	while (i-- >= 0)
+	int		i;
+
+	i = 0;
+	while (d[i])
+	{
 		free(d[i]);
+		i++;
+	}
 	free(d);
+	if (crash)
+		return (on_crash(MALLOC_ERR));
 	return (NULL);
 }
 
@@ -84,7 +92,7 @@ char		**ft_strsplit(char const *s, char c)
 		while (s[j] && s[j] != c)
 			j++;
 		if (!(d[i] = (char *)malloc(sizeof(char) * (j - k + 1))))
-			return (ft_free(d, i - 1));
+			return (ft_free_split(d, 1));
 	}
 	return (ft_f(s, d, c));
 }

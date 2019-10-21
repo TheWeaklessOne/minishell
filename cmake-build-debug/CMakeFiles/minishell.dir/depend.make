@@ -16,3 +16,6 @@ CMakeFiles/minishell.dir/Sources/ft_strsplit.c.o: ../Sources/ft_strsplit.c
 CMakeFiles/minishell.dir/Sources/minishell.c.o: ../Includes/minishell.h
 CMakeFiles/minishell.dir/Sources/minishell.c.o: ../Sources/minishell.c
 
+CMakeFiles/minishell.dir/Sources/unstandart.c.o: ../Includes/minishell.h
+CMakeFiles/minishell.dir/Sources/unstandart.c.o: ../Sources/unstandart.c
+

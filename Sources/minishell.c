@@ -12,18 +12,31 @@
 
 #include "../Includes/minishell.h"
 
-int 			check_command(char *command)
+int 			check_unstandart(char **args)
 {
 	int			res;
 
-	res = !(ft_strcmp(command, "ls") && ft_strcmp(command, "pwd"));
-	if (!res)
+	res = 3;
+	(!ft_strcmp(args[0], "clear")) ? system("clear") : res--;
+	(!ft_strcmp(args[0], "exit")) ? exit(0) : res--;
+	(!ft_strcmp(args[0], "echo")) ? ft_echo(args) : res--;
+	return (!res);
+}
+
+int 			check_command(char **args)
+{
+	int			res;
+
+	if ((res = check_unstandart(args)))
 	{
-		ft_putstr("minishell: command not found: ");
-		ft_putstr(command);
-		write(1, "\n", 1);
+		res = !(ft_strcmp(args[0], "ls") && ft_strcmp(args[0], "pwd"));
+		if (!res)
+		{
+			ft_putstr("minishell: command not found: ");
+			ft_putstr(args[0]);
+			write(1, "\n", 1);
+		}
 	}
-	(!ft_strcmp(command, "clear")) ? system("clear") : 0;
 	return (res);
 }
 
@@ -33,13 +46,13 @@ void			do_command(char *command)
 	pid_t		pid;
 
 	args = ft_strsplit(command, ' ');
-	if (args && *args && check_command(args[0]))
+	if (args && *args && check_command(args))
 		if (!(pid = fork()))
 		{
 			args[0] = ft_strjoin("/bin/", args[0], 2);
 			execv(args[0], args);
 		}
-	free(args);
+	ft_free_split(args, 0);
 	wait(&pid);
 }
 
@@ -50,7 +63,7 @@ int				main(int ac, char *av[])
 
 	system("clear");
 	command = command_renew(&command, 0);
-	while (read(1, &c, 1) && c != 'q')
+	while (read(1, &c, 1))
 	{
 		if (c == '\n')
 		{
