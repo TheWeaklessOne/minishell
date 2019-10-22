@@ -95,7 +95,7 @@ int				main(int ac, char *av[], char *envp[])
 		{
 			comv = ft_strsplit(command, ';');
 			while (comv[++c])
-				do_command(command, &shell);
+				do_command(comv[c], &shell);
 			command = command_renew(&command, 1, &shell);
 			ft_free_split(comv, 0);
 		}
