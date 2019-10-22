@@ -23,7 +23,7 @@ char 				*ft_strrenew(char **str_ptr, const char *new_str, int to_free)
 	while (new_str[++i])
 		ret[i] = new_str[i];
 	ret[i] = '\0';
-	if (to_free)
+	if (to_free && str_ptr && *str_ptr)
 		free(*str_ptr);
 	return (ret);
 }

@@ -16,10 +16,12 @@ int 			check_unstandart(char **args)
 {
 	int			res;
 
-	res = 3;
+	res = 5;
 	(!ft_strcmp(args[0], "clear")) ? system("clear") : res--;
 	(!ft_strcmp(args[0], "exit")) ? exit(0) : res--;
 	(!ft_strcmp(args[0], "echo")) ? ft_echo(args) : res--;
+	(!ft_strcmp(args[0], "colour")) ? ft_colour(args) : res--;
+	(!ft_strcmp(args[0], "color")) ? ft_colour(args) : res--;
 	return (!res);
 }
 
@@ -29,7 +31,7 @@ int 			check_command(char **args, t_shell *shell)
 
 	if ((res = check_unstandart(args)))
 	{
-		if (!(res = !(ft_strcmp(args[0], "/bin/ls") && ft_strcmp(args[0], "/bin/pwd"))))
+		if ((res = !(ft_strcmp(args[0], "/bin/ls") && ft_strcmp(args[0], "/bin/pwd"))))
 			shell->in_bin = 1;
 		else
 		{
@@ -62,10 +64,19 @@ void			do_command(char *command, t_shell *shell)
 	wait(&pid);
 }
 
-void			shell_init(t_shell *shell)
+void			shell_init(t_shell *shell, char *envp[])
 {
+	int 		i;
+
+	i = 0;
 	shell->prompt = ft_strrenew(&shell->prompt, "$> ", 0);
 	shell->in_bin = 0;
+	while (envp[i])
+		i++;
+	shell->env = malloc(sizeof(char*) * i);
+	i = -1;
+	while (envp[++i])
+		shell->env[i] = ft_strrenew(NULL, envp[i], 0);
 }
 
 int				main(int ac, char *av[], char *envp[])
@@ -73,16 +84,20 @@ int				main(int ac, char *av[], char *envp[])
 	char		*command;
 	char		c;
 	t_shell		shell;
+	char 		**comv;
 
 	system("clear");
-	shell_init(&shell);
+	shell_init(&shell, envp);
 	command = command_renew(&command, 0, &shell);
 	while (read(1, &c, 1))
 	{
-		if (c == '\n')
+		if (c == '\n' && (c = -1))
 		{
-			do_command(command, &shell);
+			comv = ft_strsplit(command, ';');
+			while (comv[++c])
+				do_command(command, &shell);
 			command = command_renew(&command, 1, &shell);
+			ft_free_split(comv, 0);
 		}
 		else
 			command = enhance_command(&command, c);

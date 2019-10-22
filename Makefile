@@ -1,23 +1,23 @@
 NAME = minishell
 
-SRC  = Sources/minishell.c Sources/ft.c Sources/ft_strsplit.c Sources/commands.c Sources/exit.c Sources/unstandart.c
+SRC  = Sources/minishell.c Sources/ft.c Sources/ft_strsplit.c Sources/commands.c Sources/exit.c Sources/unstandart.c Sources/ft_2.c
 
 OBJ  = $(SRC:.c=.o)
 
-FLAGS = 
-
+FLAGS =
 
 RED= \033[1;31m
 GREEN= \033[1;32m
 YELLOW= \033[1;33m
 BLUE= \033[1;34m
 VIOLET= \033[1;35m
+RESET= \033[0m
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	gcc $(FLAGS) $(OBJ) -o $(NAME)
-	@echo "$(GREEN)Project is successfully compiled"
+	@echo "$(GREEN)Project is successfully compiled$(RESET)"
 
 %.o : %.c
 	gcc $(FLAGS) -c $< -o $@

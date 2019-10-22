@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/wstygg/Desktop/minishell/Sources/commands.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/commands.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/exit.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/exit.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/ft.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/ft.c.o"
+  "/Users/wstygg/Desktop/minishell/Sources/ft_2.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/ft_2.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/ft_strsplit.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/ft_strsplit.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/minishell.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/minishell.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/unstandart.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/unstandart.c.o"

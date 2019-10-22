@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell.dir/Sources/commands.c.o"
   "CMakeFiles/minishell.dir/Sources/exit.c.o"
   "CMakeFiles/minishell.dir/Sources/unstandart.c.o"
+  "CMakeFiles/minishell.dir/Sources/ft_2.c.o"
   "minishell.pdb"
   "minishell"
 )

@@ -10,6 +10,9 @@ CMakeFiles/minishell.dir/Sources/exit.c.o: ../Sources/exit.c
 CMakeFiles/minishell.dir/Sources/ft.c.o: ../Includes/minishell.h
 CMakeFiles/minishell.dir/Sources/ft.c.o: ../Sources/ft.c
 
+CMakeFiles/minishell.dir/Sources/ft_2.c.o: ../Includes/minishell.h
+CMakeFiles/minishell.dir/Sources/ft_2.c.o: ../Sources/ft_2.c
+
 CMakeFiles/minishell.dir/Sources/ft_strsplit.c.o: ../Includes/minishell.h
 CMakeFiles/minishell.dir/Sources/ft_strsplit.c.o: ../Sources/ft_strsplit.c
 

@@ -204,6 +204,33 @@ Sources/ft.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/ft.c.s
 .PHONY : Sources/ft.c.s
 
+Sources/ft_2.o: Sources/ft_2.c.o
+
+.PHONY : Sources/ft_2.o
+
+# target to build an object file
+Sources/ft_2.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/ft_2.c.o
+.PHONY : Sources/ft_2.c.o
+
+Sources/ft_2.i: Sources/ft_2.c.i
+
+.PHONY : Sources/ft_2.i
+
+# target to preprocess a source file
+Sources/ft_2.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/ft_2.c.i
+.PHONY : Sources/ft_2.c.i
+
+Sources/ft_2.s: Sources/ft_2.c.s
+
+.PHONY : Sources/ft_2.s
+
+# target to generate assembly for a file
+Sources/ft_2.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/ft_2.c.s
+.PHONY : Sources/ft_2.c.s
+
 Sources/ft_strsplit.o: Sources/ft_strsplit.c.o
 
 .PHONY : Sources/ft_strsplit.o
@@ -303,6 +330,9 @@ help:
 	@echo "... Sources/ft.o"
 	@echo "... Sources/ft.i"
 	@echo "... Sources/ft.s"
+	@echo "... Sources/ft_2.o"
+	@echo "... Sources/ft_2.i"
+	@echo "... Sources/ft_2.s"
 	@echo "... Sources/ft_strsplit.o"
 	@echo "... Sources/ft_strsplit.i"
 	@echo "... Sources/ft_strsplit.s"

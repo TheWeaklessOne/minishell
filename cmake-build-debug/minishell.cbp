@@ -92,6 +92,9 @@
 		<Unit filename="/Users/wstygg/Desktop/minishell/Sources/ft.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/wstygg/Desktop/minishell/Sources/ft_2.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/wstygg/Desktop/minishell/Sources/ft_strsplit.c">
 			<Option target="minishell"/>
 		</Unit>
