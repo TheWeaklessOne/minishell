@@ -9,7 +9,7 @@ void		ft_echo(char **args)
 	i = 1 + n;
 	while (args[i])
 	{
-		ft_putstr(args[i]);
+		ft_putstr(args[i], 0);
 		if (args[i + 1])
 			write(1, " ", 1);
 		i++;

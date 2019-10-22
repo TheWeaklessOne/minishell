@@ -1,4 +1,4 @@
-C:\Users\kopi9\.CLion2019.2\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Clion_projects/minishell
+/Users/wstygg/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/wstygg/Desktop/minishell
 -- Configuring done
 -- Generating done
--- Build files have been written to: /cygdrive/c/Clion_projects/minishell/cmake-build-debug
+-- Build files have been written to: /Users/wstygg/Desktop/minishell/cmake-build-debug

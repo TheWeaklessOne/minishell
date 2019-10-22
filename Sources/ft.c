@@ -81,10 +81,12 @@ int					ft_strlen(const char *src)
 	return (i);
 }
 
-void				ft_putstr(char const *str)
+void				ft_putstr(char const *str, int new_str)
 {
 	if (!str)
 		return ;
 	while (*str)
 		write(1, str++, 1);
+	if (new_str)
+		write(1, "\n", 1);
 }

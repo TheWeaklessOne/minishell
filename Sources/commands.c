@@ -28,6 +28,6 @@ char			*command_renew(char **command, int to_free, t_shell *shell)
 	if (!(ret = malloc(sizeof(char))))
 		return (on_crash(MALLOC_ERR));
 	ret[0] = '\0';
-	ft_putstr(shell->prompt);
+	ft_putstr(shell->prompt, 0);
 	return (ret);
 }

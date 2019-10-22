@@ -36,9 +36,8 @@ int 			check_command(char **args, t_shell *shell)
 			res = !(ft_strcmp(args[0], "ls") && ft_strcmp(args[0], "pwd"));
 			if (!res)
 			{
-				ft_putstr("minishell: command not found: ");
-				ft_putstr(args[0]);
-				write(1, "\n", 1);
+				ft_putstr("minishell: command not found: ", 0);
+				ft_putstr(args[0], 1);
 			}
 			else
 				shell->in_bin = 0;
@@ -56,7 +55,7 @@ void			do_command(char *command, t_shell *shell)
 	if (args && *args && check_command(args, shell))
 		if (!(pid = fork()))
 		{
-			(t_shell ) args[0] = ft_strjoin("/bin/", args[0], 2);
+			args[0] = ft_strjoin("/bin/", args[0], 2);
 			execv(args[0], args);
 		}
 	ft_free_split(args, 0);
@@ -69,7 +68,7 @@ void			shell_init(t_shell *shell)
 	shell->in_bin = 0;
 }
 
-int				main(int ac, char *av[])
+int				main(int ac, char *av[], char *envp[])
 {
 	char		*command;
 	char		c;

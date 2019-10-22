@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/cygdrive/c/Clion_projects/minishell/Sources/commands.c" "/cygdrive/c/Clion_projects/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/commands.c.o"
-  "/cygdrive/c/Clion_projects/minishell/Sources/exit.c" "/cygdrive/c/Clion_projects/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/exit.c.o"
-  "/cygdrive/c/Clion_projects/minishell/Sources/ft.c" "/cygdrive/c/Clion_projects/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/ft.c.o"
-  "/cygdrive/c/Clion_projects/minishell/Sources/ft_strsplit.c" "/cygdrive/c/Clion_projects/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/ft_strsplit.c.o"
-  "/cygdrive/c/Clion_projects/minishell/Sources/minishell.c" "/cygdrive/c/Clion_projects/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/minishell.c.o"
-  "/cygdrive/c/Clion_projects/minishell/Sources/unstandart.c" "/cygdrive/c/Clion_projects/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/unstandart.c.o"
+  "/Users/wstygg/Desktop/minishell/Sources/commands.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/commands.c.o"
+  "/Users/wstygg/Desktop/minishell/Sources/exit.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/exit.c.o"
+  "/Users/wstygg/Desktop/minishell/Sources/ft.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/ft.c.o"
+  "/Users/wstygg/Desktop/minishell/Sources/ft_strsplit.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/ft_strsplit.c.o"
+  "/Users/wstygg/Desktop/minishell/Sources/minishell.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/minishell.c.o"
+  "/Users/wstygg/Desktop/minishell/Sources/unstandart.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/unstandart.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH

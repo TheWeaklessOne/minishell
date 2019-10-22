@@ -6,8 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell.dir/Sources/exit.c.o"
   "CMakeFiles/minishell.dir/Sources/unstandart.c.o"
   "minishell.pdb"
-  "minishell.exe"
-  "libminishell.dll.a"
+  "minishell"
 )
 
 # Per-language clean rules from dependency scanning.
