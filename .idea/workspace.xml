@@ -12,10 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5594a05-1377-49d4-a05d-7791ea25ab9b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/minishell.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/minishell.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Includes/minishell.h" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/minishell.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sources/commands.c" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/commands.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sources/exit.c" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/exit.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sources/ft.c" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/ft.c" afterDir="false" />
@@ -111,7 +110,7 @@
       <workItem from="1571666571041" duration="6517000" />
       <workItem from="1571748960317" duration="134000" />
       <workItem from="1571749098033" duration="57000" />
-      <workItem from="1571749170327" duration="242000" />
+      <workItem from="1571749170327" duration="609000" />
     </task>
     <servers />
   </component>
@@ -137,6 +136,11 @@
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Sources/unstandart.c</url>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Sources/minishell.c</url>
+          <line>31</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
