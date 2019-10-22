@@ -12,11 +12,27 @@
 
 #include "../Includes/minishell.h"
 
+char 				*ft_strrenew(char **str_ptr, const char *new_str, int to_free)
+{
+	char 			*ret;
+	int 			i;
+
+	i = -1;
+	if (!(ret = malloc(ft_strlen(new_str) + 1)))
+		on_crash(MALLOC_ERR);
+	while (new_str[++i])
+		ret[i] = new_str[i];
+	ret[i] = '\0';
+	if (to_free)
+		free(*str_ptr);
+	return (ret);
+}
+
 char				*ft_strjoin(char const *s1, char const *s2, int to_free)
 {
-	char	*str;
-	size_t	i;
-	size_t	k;
+	char			*str;
+	size_t			i;
+	size_t			k;
 
 	if (!s1 || !s2)
 		return (NULL);

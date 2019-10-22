@@ -23,52 +23,67 @@ int 			check_unstandart(char **args)
 	return (!res);
 }
 
-int 			check_command(char **args)
+int 			check_command(char **args, t_shell *shell)
 {
 	int			res;
 
 	if ((res = check_unstandart(args)))
 	{
-		res = !(ft_strcmp(args[0], "ls") && ft_strcmp(args[0], "pwd"));
-		if (!res)
+		if (!(res = !(ft_strcmp(args[0], "/bin/ls") && ft_strcmp(args[0], "/bin/pwd"))))
+			shell->in_bin = 1;
+		else
 		{
-			ft_putstr("minishell: command not found: ");
-			ft_putstr(args[0]);
-			write(1, "\n", 1);
+			res = !(ft_strcmp(args[0], "ls") && ft_strcmp(args[0], "pwd"));
+			if (!res)
+			{
+				ft_putstr("minishell: command not found: ");
+				ft_putstr(args[0]);
+				write(1, "\n", 1);
+			}
+			else
+				shell->in_bin = 0;
 		}
 	}
 	return (res);
 }
 
-void			do_command(char *command)
+void			do_command(char *command, t_shell *shell)
 {
 	char		**args;
 	pid_t		pid;
 
 	args = ft_strsplit(command, ' ');
-	if (args && *args && check_command(args))
+	if (args && *args && check_command(args, shell))
 		if (!(pid = fork()))
 		{
-			args[0] = ft_strjoin("/bin/", args[0], 2);
+			(t_shell ) args[0] = ft_strjoin("/bin/", args[0], 2);
 			execv(args[0], args);
 		}
 	ft_free_split(args, 0);
 	wait(&pid);
 }
 
+void			shell_init(t_shell *shell)
+{
+	shell->prompt = ft_strrenew(&shell->prompt, "$> ", 0);
+	shell->in_bin = 0;
+}
+
 int				main(int ac, char *av[])
 {
 	char		*command;
 	char		c;
+	t_shell		shell;
 
 	system("clear");
-	command = command_renew(&command, 0);
+	shell_init(&shell);
+	command = command_renew(&command, 0, &shell);
 	while (read(1, &c, 1))
 	{
 		if (c == '\n')
 		{
-			do_command(command);
-			command = command_renew(&command, 1);
+			do_command(command, &shell);
+			command = command_renew(&command, 1, &shell);
 		}
 		else
 			command = enhance_command(&command, c);

@@ -16,27 +16,7 @@ sys/types.h
 sys/wait.h
 -
 
-/cygdrive/c/Clion_projects/minishell/Sources/commands.c
-../Includes/minishell.h
-/cygdrive/c/Clion_projects/minishell/Includes/minishell.h
-
-/cygdrive/c/Clion_projects/minishell/Sources/exit.c
-../Includes/minishell.h
-/cygdrive/c/Clion_projects/minishell/Includes/minishell.h
-
 /cygdrive/c/Clion_projects/minishell/Sources/ft.c
-../Includes/minishell.h
-/cygdrive/c/Clion_projects/minishell/Includes/minishell.h
-
-/cygdrive/c/Clion_projects/minishell/Sources/ft_strsplit.c
-../Includes/minishell.h
-/cygdrive/c/Clion_projects/minishell/Includes/minishell.h
-
-/cygdrive/c/Clion_projects/minishell/Sources/minishell.c
-../Includes/minishell.h
-/cygdrive/c/Clion_projects/minishell/Includes/minishell.h
-
-/cygdrive/c/Clion_projects/minishell/Sources/unstandart.c
 ../Includes/minishell.h
 /cygdrive/c/Clion_projects/minishell/Includes/minishell.h
 

@@ -19,7 +19,7 @@ char			*enhance_command(char **command_ptr, char c)
 	return (new_command);
 }
 
-char			*command_renew(char **command, int to_free)
+char			*command_renew(char **command, int to_free, t_shell *shell)
 {
 	char		*ret;
 
@@ -28,6 +28,6 @@ char			*command_renew(char **command, int to_free)
 	if (!(ret = malloc(sizeof(char))))
 		return (on_crash(MALLOC_ERR));
 	ret[0] = '\0';
-	ft_putstr(PROMPT);
+	ft_putstr(shell->prompt);
 	return (ret);
 }
