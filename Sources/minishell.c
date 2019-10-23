@@ -64,6 +64,18 @@ void			do_command(char *command, t_shell *shell)
 	wait(&pid);
 }
 
+char 			*parse_env(char *str, t_shell *shell)
+{
+	int 		i;
+
+	i = -1;
+	str = ft_strjoin(str, "=", 1);
+	while (shell->env[++i])
+		if (ft_strstr(shell->env[i], str))
+			return (shell->env[i] + ft_strlen(str));
+	return (NULL);
+}
+
 void			shell_init(t_shell *shell, char *envp[])
 {
 	int 		i;
@@ -73,11 +85,15 @@ void			shell_init(t_shell *shell, char *envp[])
 	shell->in_bin = 0;
 	while (envp[i])
 		i++;
-	shell->env = malloc(sizeof(char*) * i);
+	if (!(shell->env = malloc(sizeof(char*) * i)))
+		on_crash(MALLOC_ERR);
 	i = -1;
 	while (envp[++i])
 		shell->env[i] = ft_strrenew(NULL, envp[i], 0);
+
 }
+
+#include "stdio.h"
 
 int				main(int ac, char *av[], char *envp[])
 {
@@ -88,18 +104,19 @@ int				main(int ac, char *av[], char *envp[])
 
 	system("clear");
 	shell_init(&shell, envp);
-	command = command_renew(&command, 0, &shell);
-	while (read(1, &c, 1))
-	{
-		if (c == '\n' && (c = -1))
-		{
-			comv = ft_strsplit(command, ';');
-			while (comv[++c])
-				do_command(comv[c], &shell);
-			command = command_renew(&command, 1, &shell);
-			ft_free_split(comv, 0);
-		}
-		else
-			command = enhance_command(&command, c);
-	}
+//	command = command_renew(&command, 0, &shell);
+	printf("%s\n", parse_env("TEMP", &shell));
+//	while (read(1, &c, 1))
+//	{
+//		if (c == '\n' && (c = -1))
+//		{
+//			comv = ft_strsplit(command, ';');
+//			while (comv[++c])
+//				do_command(comv[c], &shell);
+//			command = command_renew(&command, 1, &shell);
+//			ft_free_split(comv, 0);
+//		}
+//		else
+//			command = enhance_command(&command, c);
+//	}
 }

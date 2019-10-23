@@ -22,6 +22,7 @@ typedef struct	s_shell
 	char 		*prompt;
 	int			in_bin;
 	char 		**env;
+	char 		**pathv;
 }				t_shell;
 
 
@@ -36,6 +37,7 @@ char			*ft_strjoin(char const *s1, char const *s2, int to_free);
 void			ft_putstr(char const *str, int new_str);
 char			**ft_free_split(char **d, int crash);
 char			*ft_strrenew(char **str_ptr, const char *new_str, int to_free);
+char			*ft_strstr(const char *s1, const char *s2);
 
 void			ft_echo(char **args);
 void			ft_colour(char **a);

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/wstygg/Desktop/minishell/Includes/minishell.h
+/cygdrive/c/projects/minishell/Includes/minishell.h
 unistd.h
 -
 stdlib.h
@@ -16,7 +16,9 @@ sys/types.h
 sys/wait.h
 -
 
-/Users/wstygg/Desktop/minishell/Sources/minishell.c
+/cygdrive/c/projects/minishell/Sources/minishell.c
 ../Includes/minishell.h
-/Users/wstygg/Desktop/minishell/Includes/minishell.h
+/cygdrive/c/projects/minishell/Includes/minishell.h
+stdio.h
+/cygdrive/c/projects/minishell/Sources/stdio.h
 
