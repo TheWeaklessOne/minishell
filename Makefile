@@ -1,6 +1,14 @@
 NAME = minishell
 
-SRC  = Sources/minishell.c Sources/ft.c Sources/ft_strsplit.c Sources/commands.c Sources/exit.c Sources/unstandart.c Sources/ft_2.c
+SRC  =	Sources/minishell.c		\
+		Sources/ft.c			\
+        Sources/ft_strsplit.c	\
+        Sources/commands.c		\
+        Sources/exit.c			\
+        Sources/unstandart.c	\
+        Sources/ft_2.c			\
+        Sources/shell.c			\
+        Sources/env.c			\
 
 OBJ  = $(SRC:.c=.o)
 

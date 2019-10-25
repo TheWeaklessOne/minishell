@@ -12,10 +12,10 @@
 
 #include "../Includes/minishell.h"
 
-char 				*ft_strrenew(char **str_ptr, const char *new_str, int to_free)
+char				*ft_strrenew(char **s_ptr, const char *new_str, int to_free)
 {
-	char 			*ret;
-	int 			i;
+	char			*ret;
+	int				i;
 
 	i = -1;
 	if (!(ret = malloc(ft_strlen(new_str) + 1)))
@@ -23,8 +23,8 @@ char 				*ft_strrenew(char **str_ptr, const char *new_str, int to_free)
 	while (new_str[++i])
 		ret[i] = new_str[i];
 	ret[i] = '\0';
-	if (to_free && str_ptr && *str_ptr)
-		free(*str_ptr);
+	if (to_free && s_ptr && *s_ptr)
+		free(*s_ptr);
 	return (ret);
 }
 

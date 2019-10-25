@@ -12,6 +12,24 @@
 
 #include "../Includes/minishell.h"
 
+void		ft_env(t_shell *shell)
+{
+	int		i;
+
+	i = -1;
+	while (shell->env[++i])
+		ft_putstr(shell->env[i], 1);
+}
+
+void		ft_name(t_shell *shell)
+{
+	if (parse_env("USER", shell, 0))
+		shell->prompt = ft_strjoin(ft_strrenew(&shell->prompt,
+				parse_env("USER", shell, 0), 1), "% ", 1);
+	else
+		ft_putstr("An error occurred", 1);
+}
+
 void		ft_echo(char **args)
 {
 	int		i;
@@ -54,7 +72,7 @@ void		ft_put_colour_usage(void)
 
 void		ft_colour(char **a)
 {
-	int 	flag;
+	int		flag;
 
 	flag = 6;
 	if (!a[1])

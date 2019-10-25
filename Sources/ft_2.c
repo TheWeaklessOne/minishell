@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_2.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wstygg <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/25 19:00:15 by wstygg            #+#    #+#             */
+/*   Updated: 2019/10/25 19:00:16 by wstygg           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../Includes/minishell.h"
 
-char			*ft_strchr(const char *s, int c)
+char				*ft_strchr(const char *s, int c)
 {
-	size_t		i;
+	size_t			i;
 
 	i = 0;
 	while (s[i])
@@ -16,7 +28,7 @@ char			*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+int					ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	while (*s1 && *s1 == *s2 && n > 0)
 	{
@@ -30,19 +42,14 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 		return ((unsigned char)*s1 - (unsigned char)*s2);
 }
 
-char	*ft_strstr(const char *s1, const char *s2)
+char				*ft_strstr(const char *s1, const char *s2)
 {
 	unsigned int	i;
-	char			*result;
 
 	i = 0;
 	if (!ft_strlen(s2))
 		return ((char *)s1);
-	while (i < ft_strlen(s1))
-	{
-		if (!ft_strncmp((char *)s1 + i, s2, ft_strlen(s2)))
-			return (((char *)s1 + i));
-		i++;
-	}
+	if (!ft_strncmp((char *)s1, s2, ft_strlen(s2)))
+		return (((char *)s1 + i));
 	return (NULL);
 }

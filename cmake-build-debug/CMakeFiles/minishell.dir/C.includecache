@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/projects/minishell/Includes/minishell.h
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
 unistd.h
 -
 stdlib.h
@@ -16,9 +16,39 @@ sys/types.h
 sys/wait.h
 -
 
-/cygdrive/c/projects/minishell/Sources/minishell.c
+/Users/wstygg/Desktop/minishell/Sources/commands.c
 ../Includes/minishell.h
-/cygdrive/c/projects/minishell/Includes/minishell.h
-stdio.h
-/cygdrive/c/projects/minishell/Sources/stdio.h
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
+
+/Users/wstygg/Desktop/minishell/Sources/env.c
+../Includes/minishell.h
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
+
+/Users/wstygg/Desktop/minishell/Sources/exit.c
+../Includes/minishell.h
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
+
+/Users/wstygg/Desktop/minishell/Sources/ft.c
+../Includes/minishell.h
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
+
+/Users/wstygg/Desktop/minishell/Sources/ft_2.c
+../Includes/minishell.h
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
+
+/Users/wstygg/Desktop/minishell/Sources/ft_strsplit.c
+../Includes/minishell.h
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
+
+/Users/wstygg/Desktop/minishell/Sources/minishell.c
+../Includes/minishell.h
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
+
+/Users/wstygg/Desktop/minishell/Sources/shell.c
+../Includes/minishell.h
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
+
+/Users/wstygg/Desktop/minishell/Sources/unstandart.c
+../Includes/minishell.h
+/Users/wstygg/Desktop/minishell/Includes/minishell.h
 

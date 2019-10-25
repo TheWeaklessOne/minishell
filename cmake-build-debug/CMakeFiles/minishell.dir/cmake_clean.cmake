@@ -6,9 +6,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell.dir/Sources/ft_strsplit.c.o"
   "CMakeFiles/minishell.dir/Sources/minishell.c.o"
   "CMakeFiles/minishell.dir/Sources/unstandart.c.o"
-  "libminishell.dll.a"
-  "minishell.exe"
+  "CMakeFiles/minishell.dir/Sources/shell.c.o"
+  "CMakeFiles/minishell.dir/Sources/env.c.o"
   "minishell.pdb"
+  "minishell"
 )
 
 # Per-language clean rules from dependency scanning.

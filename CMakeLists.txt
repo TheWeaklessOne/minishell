@@ -1,6 +1,16 @@
 cmake_minimum_required(VERSION 3.14)
 project(minishell C)
 
-set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD 11)
 
-add_executable(minishell Sources/minishell.c Sources/ft.c Includes/minishell.h Sources/ft_strsplit.c Sources/commands.c Sources/exit.c Sources/unstandart.c Sources/ft_2.c)
+include_directories(Includes)
+
+add_executable(minishell
+        Includes/minishell.h
+        Sources/commands.c
+        Sources/exit.c
+        Sources/ft.c
+        Sources/ft_2.c
+        Sources/ft_strsplit.c
+        Sources/minishell.c
+        Sources/unstandart.c Sources/shell.c Sources/env.c)

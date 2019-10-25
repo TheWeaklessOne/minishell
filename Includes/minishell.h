@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   minishell.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wstygg <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/25 18:55:51 by wstygg            #+#    #+#             */
+/*   Updated: 2019/10/25 18:55:53 by wstygg           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
@@ -19,15 +30,16 @@
 
 typedef struct	s_shell
 {
-	char 		*prompt;
-	int			in_bin;
-	char 		**env;
-	char 		**pathv;
+	char		*prompt;
+	char		**env;
+	char		**pathv;
+	int			pathv_it;
 }				t_shell;
 
-
+int				is_unstandart(char **args, t_shell *shell);
 char			*enhance_command(char **command_ptr, char c);
 char			*command_renew(char **command, int to_free, t_shell *shell);
+void			do_command(char *command, t_shell *shell);
 
 char			*ft_strchr(const char *s, int c);
 int				ft_strcmp(const char *s11, const char *s22);
@@ -41,6 +53,12 @@ char			*ft_strstr(const char *s1, const char *s2);
 
 void			ft_echo(char **args);
 void			ft_colour(char **a);
+void			ft_name(t_shell *shell);
+void			ft_env(t_shell *shell);
+
+void			shell_init(t_shell *shell, char *envp[]);
+
+char			*parse_env(char *str, t_shell *shell, int to_free);
 
 void			*on_crash(int err);
 
