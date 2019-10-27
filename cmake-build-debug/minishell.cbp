@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/wstygg/Desktop/minishell/Includes/list.h">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/wstygg/Desktop/minishell/Includes/minishell.h">
 			<Option target="minishell"/>
 		</Unit>
@@ -103,6 +106,9 @@
 		<Unit filename="/Users/wstygg/Desktop/minishell/Sources/ft_strsplit.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/wstygg/Desktop/minishell/Sources/list.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/wstygg/Desktop/minishell/Sources/minishell.c">
 			<Option target="minishell"/>
 		</Unit>
@@ -110,6 +116,9 @@
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/wstygg/Desktop/minishell/Sources/unstandart.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/wstygg/Desktop/minishell/Sources/unstandart_2.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/wstygg/Desktop/minishell/CMakeLists.txt">

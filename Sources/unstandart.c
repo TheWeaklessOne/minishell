@@ -14,11 +14,14 @@
 
 void		ft_env(t_shell *shell)
 {
-	int		i;
+	t_list	*lst;
 
-	i = -1;
-	while (shell->env[++i])
-		ft_putstr(shell->env[i], 1);
+	lst = shell->env_lst;
+	while (lst)
+	{
+		ft_putstr(lst->content, 1);
+		lst = lst->next;
+	}
 }
 
 void		ft_name(t_shell *shell)
@@ -30,22 +33,24 @@ void		ft_name(t_shell *shell)
 		ft_putstr("An error occurred", 1);
 }
 
-void		ft_echo(char **args)
+void		ft_echo(char **args, t_shell *shell)
 {
 	int		i;
-	int		j;
 	int		n;
+	char 	*str;
 
 	n = (args[1] && !ft_strcmp(args[1], "-n"));
 	i = 1 + n;
 	while (args[i])
 	{
-		j = -1;
-		while (args[i][++j])
-			if (args[i][j] != '\'' && args[i][j] != '\"')
-				write(1, args[i] + j, 1);
+		if (ft_strchr(args[i], '$'))
+			str = parse_env(args[i] + 1, shell, 0);
+		else
+			str = ignore_quotation(args[i], 0);
+		ft_putstr(str, 0);
 		if (args[i + 1])
 			write(1, " ", 1);
+		(!ft_strchr(args[i], '$')) ? free(str) : 0;
 		i++;
 	}
 	if (!n)

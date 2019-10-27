@@ -12,22 +12,40 @@
 
 #include "../Includes/minishell.h"
 
+void			path_init(t_shell *shell)
+{
+	int			i;
+	char 		**split;
+	t_list		*lst;
+
+	if (shell->path_lst)
+		while (shell->path_lst)
+			shell->path_lst = list_remove_front(shell->path_lst, 1);
+	if ((split = ft_strsplit(parse_env("PATH", shell, 0), ':')))
+	{
+		i = -1;
+		while (split[++i])
+			shell->path_lst = list_add_back(shell->path_lst, split[i]);
+		lst = shell->path_lst;
+		while (lst)
+		{
+			lst->content = ft_strjoin(lst->content, "/", 1);
+			lst = lst->next;
+		}
+		free(split);
+	}
+}
 void			shell_init(t_shell *shell, char *envp[])
 {
 	int			i;
 
-	i = 0;
-	shell->pathv_it = 0;
+	i = -1;
 	shell->prompt = ft_strrenew(&shell->prompt, "$> ", 0);
-	while (envp[i])
-		i++;
-	if (!(shell->env = malloc(sizeof(char*) * i)))
-		on_crash(MALLOC_ERR);
-	i = -1;
+	shell->env_lst = NULL;
+	shell->path_lst = NULL;
+	shell->path = NULL;
 	while (envp[++i])
-		shell->env[i] = ft_strrenew(NULL, envp[i], 0);
-	shell->pathv = ft_strsplit(parse_env("PATH", shell, 0), ':');
-	i = -1;
-	while (shell->pathv[++i])
-		shell->pathv[i] = ft_strjoin(shell->pathv[i], "/", 0);
+		shell->env_lst = list_add_back(shell->env_lst,
+				ft_strrenew(NULL, envp[i], 0));
+	path_init(shell);
 }

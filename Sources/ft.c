@@ -48,6 +48,11 @@ char				*ft_strjoin(char const *s1, char const *s2, int to_free)
 	str[k] = '\0';
 	(to_free == 1) ? free((void*)s1) : 0;
 	(to_free == 2) ? free((void*)s2) : 0;
+	if (to_free == 3)
+	{
+		free((void*)s1);
+		free((void*)s2);
+	}
 	return (str);
 }
 

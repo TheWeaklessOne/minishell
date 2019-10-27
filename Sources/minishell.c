@@ -35,4 +35,5 @@ int				main(int ac, char *av[], char *envp[])
 		else
 			command = enhance_command(&command, c);
 	}
+	exit(0);
 }

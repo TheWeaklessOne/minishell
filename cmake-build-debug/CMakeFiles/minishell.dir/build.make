@@ -174,6 +174,32 @@ CMakeFiles/minishell.dir/Sources/env.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/Sources/env.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wstygg/Desktop/minishell/Sources/env.c -o CMakeFiles/minishell.dir/Sources/env.c.s
 
+CMakeFiles/minishell.dir/Sources/unstandart_2.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/Sources/unstandart_2.c.o: ../Sources/unstandart_2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/minishell.dir/Sources/unstandart_2.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/Sources/unstandart_2.c.o   -c /Users/wstygg/Desktop/minishell/Sources/unstandart_2.c
+
+CMakeFiles/minishell.dir/Sources/unstandart_2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/Sources/unstandart_2.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wstygg/Desktop/minishell/Sources/unstandart_2.c > CMakeFiles/minishell.dir/Sources/unstandart_2.c.i
+
+CMakeFiles/minishell.dir/Sources/unstandart_2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/Sources/unstandart_2.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wstygg/Desktop/minishell/Sources/unstandart_2.c -o CMakeFiles/minishell.dir/Sources/unstandart_2.c.s
+
+CMakeFiles/minishell.dir/Sources/list.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/Sources/list.c.o: ../Sources/list.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/minishell.dir/Sources/list.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/Sources/list.c.o   -c /Users/wstygg/Desktop/minishell/Sources/list.c
+
+CMakeFiles/minishell.dir/Sources/list.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/Sources/list.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wstygg/Desktop/minishell/Sources/list.c > CMakeFiles/minishell.dir/Sources/list.c.i
+
+CMakeFiles/minishell.dir/Sources/list.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/Sources/list.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wstygg/Desktop/minishell/Sources/list.c -o CMakeFiles/minishell.dir/Sources/list.c.s
+
 # Object files for target minishell
 minishell_OBJECTS = \
 "CMakeFiles/minishell.dir/Sources/commands.c.o" \
@@ -184,7 +210,9 @@ minishell_OBJECTS = \
 "CMakeFiles/minishell.dir/Sources/minishell.c.o" \
 "CMakeFiles/minishell.dir/Sources/unstandart.c.o" \
 "CMakeFiles/minishell.dir/Sources/shell.c.o" \
-"CMakeFiles/minishell.dir/Sources/env.c.o"
+"CMakeFiles/minishell.dir/Sources/env.c.o" \
+"CMakeFiles/minishell.dir/Sources/unstandart_2.c.o" \
+"CMakeFiles/minishell.dir/Sources/list.c.o"
 
 # External object files for target minishell
 minishell_EXTERNAL_OBJECTS =
@@ -198,9 +226,11 @@ minishell: CMakeFiles/minishell.dir/Sources/minishell.c.o
 minishell: CMakeFiles/minishell.dir/Sources/unstandart.c.o
 minishell: CMakeFiles/minishell.dir/Sources/shell.c.o
 minishell: CMakeFiles/minishell.dir/Sources/env.c.o
+minishell: CMakeFiles/minishell.dir/Sources/unstandart_2.c.o
+minishell: CMakeFiles/minishell.dir/Sources/list.c.o
 minishell: CMakeFiles/minishell.dir/build.make
 minishell: CMakeFiles/minishell.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable minishell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C executable minishell"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/minishell.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -10,9 +10,11 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/wstygg/Desktop/minishell/Sources/ft.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/ft.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/ft_2.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/ft_2.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/ft_strsplit.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/ft_strsplit.c.o"
+  "/Users/wstygg/Desktop/minishell/Sources/list.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/list.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/minishell.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/minishell.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/shell.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/shell.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/unstandart.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/unstandart.c.o"
+  "/Users/wstygg/Desktop/minishell/Sources/unstandart_2.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/unstandart_2.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

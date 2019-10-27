@@ -28,3 +28,6 @@ CMakeFiles/minishell.dir/Sources/shell.c.o: ../Sources/shell.c
 CMakeFiles/minishell.dir/Sources/unstandart.c.o: ../Includes/minishell.h
 CMakeFiles/minishell.dir/Sources/unstandart.c.o: ../Sources/unstandart.c
 
+CMakeFiles/minishell.dir/Sources/unstandart_2.c.o: ../Includes/minishell.h
+CMakeFiles/minishell.dir/Sources/unstandart_2.c.o: ../Sources/unstandart_2.c
+

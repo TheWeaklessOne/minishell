@@ -285,6 +285,33 @@ Sources/ft_strsplit.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/ft_strsplit.c.s
 .PHONY : Sources/ft_strsplit.c.s
 
+Sources/list.o: Sources/list.c.o
+
+.PHONY : Sources/list.o
+
+# target to build an object file
+Sources/list.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/list.c.o
+.PHONY : Sources/list.c.o
+
+Sources/list.i: Sources/list.c.i
+
+.PHONY : Sources/list.i
+
+# target to preprocess a source file
+Sources/list.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/list.c.i
+.PHONY : Sources/list.c.i
+
+Sources/list.s: Sources/list.c.s
+
+.PHONY : Sources/list.s
+
+# target to generate assembly for a file
+Sources/list.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/list.c.s
+.PHONY : Sources/list.c.s
+
 Sources/minishell.o: Sources/minishell.c.o
 
 .PHONY : Sources/minishell.o
@@ -366,6 +393,33 @@ Sources/unstandart.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/unstandart.c.s
 .PHONY : Sources/unstandart.c.s
 
+Sources/unstandart_2.o: Sources/unstandart_2.c.o
+
+.PHONY : Sources/unstandart_2.o
+
+# target to build an object file
+Sources/unstandart_2.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/unstandart_2.c.o
+.PHONY : Sources/unstandart_2.c.o
+
+Sources/unstandart_2.i: Sources/unstandart_2.c.i
+
+.PHONY : Sources/unstandart_2.i
+
+# target to preprocess a source file
+Sources/unstandart_2.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/unstandart_2.c.i
+.PHONY : Sources/unstandart_2.c.i
+
+Sources/unstandart_2.s: Sources/unstandart_2.c.s
+
+.PHONY : Sources/unstandart_2.s
+
+# target to generate assembly for a file
+Sources/unstandart_2.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/unstandart_2.c.s
+.PHONY : Sources/unstandart_2.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -393,6 +447,9 @@ help:
 	@echo "... Sources/ft_strsplit.o"
 	@echo "... Sources/ft_strsplit.i"
 	@echo "... Sources/ft_strsplit.s"
+	@echo "... Sources/list.o"
+	@echo "... Sources/list.i"
+	@echo "... Sources/list.s"
 	@echo "... Sources/minishell.o"
 	@echo "... Sources/minishell.i"
 	@echo "... Sources/minishell.s"
@@ -402,6 +459,9 @@ help:
 	@echo "... Sources/unstandart.o"
 	@echo "... Sources/unstandart.i"
 	@echo "... Sources/unstandart.s"
+	@echo "... Sources/unstandart_2.o"
+	@echo "... Sources/unstandart_2.i"
+	@echo "... Sources/unstandart_2.s"
 .PHONY : help
 
 

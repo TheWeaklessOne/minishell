@@ -1,14 +1,16 @@
 NAME = minishell
 
-SRC  =	Sources/minishell.c		\
+SRC  =	Sources/commands.c		\
+		Sources/env.c			\
+		Sources/exit.c			\
 		Sources/ft.c			\
-        Sources/ft_strsplit.c	\
-        Sources/commands.c		\
-        Sources/exit.c			\
-        Sources/unstandart.c	\
-        Sources/ft_2.c			\
-        Sources/shell.c			\
-        Sources/env.c			\
+		Sources/ft_2.c			\
+		Sources/ft_strsplit.c	\
+		Sources/minishell.c		\
+		Sources/shell.c			\
+		Sources/unstandart.c	\
+		Sources/unstandart_2.c	\
+		Sources/list.c			\
 
 OBJ  = $(SRC:.c=.o)
 
@@ -25,6 +27,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	gcc $(FLAGS) $(OBJ) -o $(NAME)
+	rm -rf $(OBJ)
 	@echo "$(GREEN)Project is successfully compiled$(RESET)"
 
 %.o : %.c

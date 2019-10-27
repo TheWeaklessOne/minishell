@@ -16,37 +16,39 @@ int				is_unstandart(char **args, t_shell *shell)
 {
 	int			res;
 
-	res = 7;
+	res = 9;
 	(!ft_strcmp(args[0], "clear")) ? system("clear") : res--;
 	(!ft_strcmp(args[0], "exit")) ? exit(0) : res--;
-	(!ft_strcmp(args[0], "echo")) ? ft_echo(args) : res--;
+	(!ft_strcmp(args[0], "echo")) ? ft_echo(args, shell) : res--;
 	(!ft_strcmp(args[0], "colour")) ? ft_colour(args) : res--;
 	(!ft_strcmp(args[0], "color")) ? ft_colour(args) : res--;
 	(!ft_strcmp(args[0], "user")) ? ft_name(shell) : res--;
 	(!ft_strcmp(args[0], "env")) ? ft_env(shell) : res--;
+	(!ft_strcmp(args[0], "setenv")) ? ft_setenv(args, shell) : res--;
+	(!ft_strcmp(args[0], "unsetenv")) ? ft_unsetenv(args, shell) : res--;
 	return (res);
 }
 
 int				check_command(char **args, t_shell *shell)
 {
 	char		*path;
-	int			i;
+	t_list		*lst;
 
-	i = -1;
+	lst = shell->path_lst;
 	if (access(args[0], 1))
 	{
-		while (shell->pathv[++i])
+		while (lst)
 		{
-			path = ft_strjoin(shell->pathv[i], args[0], 0);
+			path = ft_strjoin(lst->content, args[0], 0);
 			if (!access(path, 1))
-				shell->pathv_it = i;
+				shell->path = lst;
 			free(path);
+			lst = lst->next;
 		}
-		return (shell->pathv_it);
+		return (shell->path != NULL);
 	}
 	else
-		shell->pathv_it = -1;
-	return (1);
+		return (1);
 }
 
 void			do_command(char *command, t_shell *shell)
@@ -61,10 +63,9 @@ void			do_command(char *command, t_shell *shell)
 		{
 			if (!(pid = fork()))
 			{
-				if (shell->pathv_it != -1)
-					args[0] = ft_strjoin(shell->pathv[shell->pathv_it],
-							args[0], 2);
-				execv(args[0], args);
+				if (shell->path)
+					args[0] = ft_strjoin(shell->path->content, args[0], 2);
+				execve(args[0], args, NULL);
 			}
 		}
 		else
@@ -74,7 +75,7 @@ void			do_command(char *command, t_shell *shell)
 		}
 	}
 	ft_free_split(args, 0);
-	shell->pathv_it = 0;
+	shell->path = NULL;
 	wait(&pid);
 }
 
