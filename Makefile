@@ -1,20 +1,22 @@
 NAME = minishell
 
-SRC  =	Sources/commands.c		\
-		Sources/env.c			\
-		Sources/exit.c			\
-		Sources/ft.c			\
-		Sources/ft_2.c			\
-		Sources/ft_strsplit.c	\
-		Sources/minishell.c		\
-		Sources/shell.c			\
-		Sources/unstandart.c	\
-		Sources/unstandart_2.c	\
-		Sources/list.c			\
+SRC  =	Sources/commands.c				\
+		Sources/env.c					\
+		Sources/exit.c					\
+		Sources/ft.c					\
+		Sources/ft_2.c					\
+		Sources/ft_strsplit.c			\
+		Sources/minishell.c				\
+		Sources/shell.c					\
+		Sources/unstandart.c			\
+		Sources/unstandart_2.c			\
+		Sources/list.c					\
+		Sources/cd.c					\
+		Sources/ft_split_whitespaces.c	\
 
 OBJ  = $(SRC:.c=.o)
 
-FLAGS =
+FLAGS = -Wall -Wextra -Werror
 
 RED= \033[1;31m
 GREEN= \033[1;32m
@@ -27,7 +29,6 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	gcc $(FLAGS) $(OBJ) -o $(NAME)
-	rm -rf $(OBJ)
 	@echo "$(GREEN)Project is successfully compiled$(RESET)"
 
 %.o : %.c

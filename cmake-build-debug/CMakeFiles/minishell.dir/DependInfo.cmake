@@ -4,11 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/Users/wstygg/Desktop/minishell/Sources/cd.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/cd.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/commands.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/commands.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/env.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/env.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/exit.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/exit.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/ft.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/ft.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/ft_2.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/ft_2.c.o"
+  "/Users/wstygg/Desktop/minishell/Sources/ft_split_whitespaces.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/ft_strsplit.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/ft_strsplit.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/list.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/list.c.o"
   "/Users/wstygg/Desktop/minishell/Sources/minishell.c" "/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/Sources/minishell.c.o"

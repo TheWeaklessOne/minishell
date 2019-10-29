@@ -12,11 +12,10 @@
 
 #include "../Includes/minishell.h"
 
-
 void			ft_unsetenv(char **args, t_shell *shell)
 {
 	t_list		*lst;
-	char 		*str;
+	char		*str;
 
 	lst = shell->env_lst;
 	if (!args[1])
@@ -40,9 +39,9 @@ void			ft_unsetenv(char **args, t_shell *shell)
 
 void			ft_setenv(char **args, t_shell *shell)
 {
-	char 		*str;
-	char 		*name;
-	char 		*value;
+	char		*str;
+	char		*name;
+	char		*value;
 
 	if (!args[1] || !args[2])
 	{
@@ -63,7 +62,7 @@ void			ft_setenv(char **args, t_shell *shell)
 
 char			*parse_env(char *str, t_shell *shell, int to_free)
 {
-	int 		len;
+	int			len;
 	t_list		*lst;
 
 	str = ft_strjoin(str, "=", to_free);

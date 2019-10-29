@@ -13,4 +13,4 @@ add_executable(minishell
         Sources/ft_2.c
         Sources/ft_strsplit.c
         Sources/minishell.c
-        Sources/unstandart.c Sources/shell.c Sources/env.c Sources/unstandart_2.c Sources/list.c Includes/list.h)
+        Sources/unstandart.c Sources/shell.c Sources/env.c Sources/unstandart_2.c Sources/list.c Includes/list.h Sources/cd.c Sources/ft_split_whitespaces.c)

@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell.dir/Sources/env.c.o"
   "CMakeFiles/minishell.dir/Sources/unstandart_2.c.o"
   "CMakeFiles/minishell.dir/Sources/list.c.o"
+  "CMakeFiles/minishell.dir/Sources/cd.c.o"
+  "CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.o"
   "minishell.pdb"
   "minishell"
 )

@@ -15,7 +15,7 @@
 int				main(int ac, char *av[], char *envp[])
 {
 	char		*command;
-	char		c;
+	int			c;
 	t_shell		shell;
 	char		**comv;
 
@@ -35,5 +35,7 @@ int				main(int ac, char *av[], char *envp[])
 		else
 			command = enhance_command(&command, c);
 	}
+	ac++;
+	av++;
 	exit(0);
 }

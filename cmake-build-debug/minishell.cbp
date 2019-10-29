@@ -88,6 +88,9 @@
 		<Unit filename="/Users/wstygg/Desktop/minishell/Includes/minishell.h">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/wstygg/Desktop/minishell/Sources/cd.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/wstygg/Desktop/minishell/Sources/commands.c">
 			<Option target="minishell"/>
 		</Unit>
@@ -101,6 +104,9 @@
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/wstygg/Desktop/minishell/Sources/ft_2.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/wstygg/Desktop/minishell/Sources/ft_split_whitespaces.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/wstygg/Desktop/minishell/Sources/ft_strsplit.c">

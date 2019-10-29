@@ -123,6 +123,33 @@ minishell/fast:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/build
 .PHONY : minishell/fast
 
+Sources/cd.o: Sources/cd.c.o
+
+.PHONY : Sources/cd.o
+
+# target to build an object file
+Sources/cd.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/cd.c.o
+.PHONY : Sources/cd.c.o
+
+Sources/cd.i: Sources/cd.c.i
+
+.PHONY : Sources/cd.i
+
+# target to preprocess a source file
+Sources/cd.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/cd.c.i
+.PHONY : Sources/cd.c.i
+
+Sources/cd.s: Sources/cd.c.s
+
+.PHONY : Sources/cd.s
+
+# target to generate assembly for a file
+Sources/cd.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/cd.c.s
+.PHONY : Sources/cd.c.s
+
 Sources/commands.o: Sources/commands.c.o
 
 .PHONY : Sources/commands.o
@@ -257,6 +284,33 @@ Sources/ft_2.s: Sources/ft_2.c.s
 Sources/ft_2.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/ft_2.c.s
 .PHONY : Sources/ft_2.c.s
+
+Sources/ft_split_whitespaces.o: Sources/ft_split_whitespaces.c.o
+
+.PHONY : Sources/ft_split_whitespaces.o
+
+# target to build an object file
+Sources/ft_split_whitespaces.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.o
+.PHONY : Sources/ft_split_whitespaces.c.o
+
+Sources/ft_split_whitespaces.i: Sources/ft_split_whitespaces.c.i
+
+.PHONY : Sources/ft_split_whitespaces.i
+
+# target to preprocess a source file
+Sources/ft_split_whitespaces.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.i
+.PHONY : Sources/ft_split_whitespaces.c.i
+
+Sources/ft_split_whitespaces.s: Sources/ft_split_whitespaces.c.s
+
+.PHONY : Sources/ft_split_whitespaces.s
+
+# target to generate assembly for a file
+Sources/ft_split_whitespaces.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.s
+.PHONY : Sources/ft_split_whitespaces.c.s
 
 Sources/ft_strsplit.o: Sources/ft_strsplit.c.o
 
@@ -429,6 +483,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... minishell"
+	@echo "... Sources/cd.o"
+	@echo "... Sources/cd.i"
+	@echo "... Sources/cd.s"
 	@echo "... Sources/commands.o"
 	@echo "... Sources/commands.i"
 	@echo "... Sources/commands.s"
@@ -444,6 +501,9 @@ help:
 	@echo "... Sources/ft_2.o"
 	@echo "... Sources/ft_2.i"
 	@echo "... Sources/ft_2.s"
+	@echo "... Sources/ft_split_whitespaces.o"
+	@echo "... Sources/ft_split_whitespaces.i"
+	@echo "... Sources/ft_split_whitespaces.s"
 	@echo "... Sources/ft_strsplit.o"
 	@echo "... Sources/ft_strsplit.i"
 	@echo "... Sources/ft_strsplit.s"

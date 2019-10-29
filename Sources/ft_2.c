@@ -12,6 +12,52 @@
 
 #include "../Includes/minishell.h"
 
+char				*ignore_quotation(char *str, int to_free)
+{
+	int				i;
+	int				j;
+	char			*ret;
+	char			ignore;
+
+	if (!(ret = malloc(ft_strlen(str) + 1)))
+		return (on_crash(MALLOC_ERR));
+	ignore = 0;
+	i = 0;
+	j = -1;
+	while (str[++j])
+	{
+		if (!ignore && (str[j] == '\'' || str[j] == '\"'))
+			ignore = str[j];
+		if (str[j] != ignore)
+			ret[i++] = str[j];
+	}
+	ret[i] = '\0';
+	if (to_free)
+		free(str);
+	return (ret);
+}
+
+char				*ft_ignore_spaces(char *str, int to_free)
+{
+	char			*ret;
+	int				i;
+	int				j;
+
+	if (!(ret = malloc(ft_strlen(str) + 1)))
+		return (on_crash(MALLOC_ERR));
+	i = 0;
+	j = -1;
+	while (str[++j])
+	{
+		if (!((str[j] >= 9 && str[j] <= 13) || str[j] == ' '))
+			ret[i++] = str[j];
+	}
+	ret[i] = '\0';
+	if (to_free)
+		free(str);
+	return (ret);
+}
+
 char				*ft_strchr(const char *s, int c)
 {
 	size_t			i;

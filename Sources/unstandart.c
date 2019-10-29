@@ -24,37 +24,33 @@ void		ft_env(t_shell *shell)
 	}
 }
 
-void		ft_name(t_shell *shell)
+void		ft_put_prompt_usage(void)
 {
-	if (parse_env("USER", shell, 0))
-		shell->prompt = ft_strjoin(ft_strrenew(&shell->prompt,
-				parse_env("USER", shell, 0), 1), "% ", 1);
-	else
-		ft_putstr("An error occurred", 1);
+	ft_putstr("usage: prompt [-*type*]", 1);
+	ft_putstr("    types: ", 1);
+	ft_putstr("\tuser - prompt is current user name", 1);
+	ft_putstr("\tpath - prompt is current directory path", 1);
+	ft_putstr("\tdefault - standart prompt", 1);
 }
 
-void		ft_echo(char **args, t_shell *shell)
+void		ft_prompt(char *args[], t_shell *shell)
 {
-	int		i;
-	int		n;
-	char 	*str;
-
-	n = (args[1] && !ft_strcmp(args[1], "-n"));
-	i = 1 + n;
-	while (args[i])
+	if (!args[1])
+		ft_put_prompt_usage();
+	else if (!ft_strcmp(args[1], "-user"))
 	{
-		if (ft_strchr(args[i], '$'))
-			str = parse_env(args[i] + 1, shell, 0);
+		if (parse_env("USER", shell, 0) && !(shell->is_path_prompt = 0))
+			shell->prompt = ft_strjoin(ft_strrenew(&shell->prompt,
+					parse_env("USER", shell, 0), 1), "% ", 1);
 		else
-			str = ignore_quotation(args[i], 0);
-		ft_putstr(str, 0);
-		if (args[i + 1])
-			write(1, " ", 1);
-		(!ft_strchr(args[i], '$')) ? free(str) : 0;
-		i++;
+			ft_putstr("An error occurred", 1);
 	}
-	if (!n)
-		write(1, "\n", 1);
+	else if (!ft_strcmp(args[1], "-path"))
+		ft_set_path_prompt(shell);
+	else if (!ft_strcmp(args[1], "-default") && !(shell->is_path_prompt = 0))
+		shell->prompt = ft_strrenew(&shell->prompt, "$> ", 1);
+	else
+		ft_put_prompt_usage();
 }
 
 void		ft_put_colour_usage(void)

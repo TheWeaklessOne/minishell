@@ -12,30 +12,6 @@
 
 #include "../Includes/minishell.h"
 
-char 		*ignore_quotation(char *str, int to_free)
-{
-	char	*ret;
-	int 	i;
-	char 	ignore;
-
-	if (!(ret = malloc(ft_strlen(str) + 1)))
-		return (on_crash(MALLOC_ERR));
-	ignore = 0;
-	i = 0;
-	while (*str)
-	{
-		if (!ignore && (*str == '\'' || *str == '\"'))
-			ignore = *str;
-		if (*str != ignore)
-			ret[i++] = *str;
-		str++;
-	}
-	ret[i] = '\0';
-	if (to_free)
-		free(str);
-	return (ret);
-}
-
 int			ft_str(const char *s, char c)
 {
 	int		i;

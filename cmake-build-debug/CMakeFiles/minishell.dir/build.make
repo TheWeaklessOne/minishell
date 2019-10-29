@@ -200,6 +200,32 @@ CMakeFiles/minishell.dir/Sources/list.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/Sources/list.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wstygg/Desktop/minishell/Sources/list.c -o CMakeFiles/minishell.dir/Sources/list.c.s
 
+CMakeFiles/minishell.dir/Sources/cd.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/Sources/cd.c.o: ../Sources/cd.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/minishell.dir/Sources/cd.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/Sources/cd.c.o   -c /Users/wstygg/Desktop/minishell/Sources/cd.c
+
+CMakeFiles/minishell.dir/Sources/cd.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/Sources/cd.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wstygg/Desktop/minishell/Sources/cd.c > CMakeFiles/minishell.dir/Sources/cd.c.i
+
+CMakeFiles/minishell.dir/Sources/cd.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/Sources/cd.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wstygg/Desktop/minishell/Sources/cd.c -o CMakeFiles/minishell.dir/Sources/cd.c.s
+
+CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.o: ../Sources/ft_split_whitespaces.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.o   -c /Users/wstygg/Desktop/minishell/Sources/ft_split_whitespaces.c
+
+CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wstygg/Desktop/minishell/Sources/ft_split_whitespaces.c > CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.i
+
+CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wstygg/Desktop/minishell/Sources/ft_split_whitespaces.c -o CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.s
+
 # Object files for target minishell
 minishell_OBJECTS = \
 "CMakeFiles/minishell.dir/Sources/commands.c.o" \
@@ -212,7 +238,9 @@ minishell_OBJECTS = \
 "CMakeFiles/minishell.dir/Sources/shell.c.o" \
 "CMakeFiles/minishell.dir/Sources/env.c.o" \
 "CMakeFiles/minishell.dir/Sources/unstandart_2.c.o" \
-"CMakeFiles/minishell.dir/Sources/list.c.o"
+"CMakeFiles/minishell.dir/Sources/list.c.o" \
+"CMakeFiles/minishell.dir/Sources/cd.c.o" \
+"CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.o"
 
 # External object files for target minishell
 minishell_EXTERNAL_OBJECTS =
@@ -228,9 +256,11 @@ minishell: CMakeFiles/minishell.dir/Sources/shell.c.o
 minishell: CMakeFiles/minishell.dir/Sources/env.c.o
 minishell: CMakeFiles/minishell.dir/Sources/unstandart_2.c.o
 minishell: CMakeFiles/minishell.dir/Sources/list.c.o
+minishell: CMakeFiles/minishell.dir/Sources/cd.c.o
+minishell: CMakeFiles/minishell.dir/Sources/ft_split_whitespaces.c.o
 minishell: CMakeFiles/minishell.dir/build.make
 minishell: CMakeFiles/minishell.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C executable minishell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wstygg/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable minishell"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/minishell.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
