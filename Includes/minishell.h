@@ -64,6 +64,7 @@ char				*ft_strrenew(char **s_ptr, const char *new_s, int to_free);
 char				*ft_strstr(const char *s1, const char *s2);
 char				*ignore_quotation(char *str, int to_free);
 
+void				ft_help(void);
 void				ft_echo(char **args, t_shell *shell);
 void				ft_colour(char **a);
 void				ft_prompt(char *args[], t_shell *shell);

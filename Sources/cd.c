@@ -12,12 +12,23 @@
 
 #include "../Includes/minishell.h"
 
-char			*create_full_path(char *path)
+char			*create_full_path(char *path, t_shell *shell)
 {
 	char		*ret;
 
 	if (!path)
 		return (NULL);
+	if (path[0] == '/')
+		return (ft_strrenew(NULL, path, 0));
+	if (path[0] == '~')
+	{
+		if (parse_env("HOME", shell, 0))
+		{
+			ret = ft_strjoin(parse_env("HOME", shell, 0), path + 1, 0);
+			return (ret);
+		}
+		return (NULL);
+	}
 	if (!(ret = getcwd(NULL, 0)))
 		on_crash(GETCWD_ERR);
 	ret = ft_strjoin(ret, "/", 1);
@@ -77,7 +88,7 @@ void			ft_cd_2(char *args[], t_shell *shell)
 	struct stat	path_stat;
 	char		*full_path;
 
-	if (!access((full_path = create_full_path(args[1])), F_OK))
+	if (!access((full_path = create_full_path(args[1], shell)), F_OK))
 	{
 		stat(full_path, &path_stat);
 		if (S_ISDIR(path_stat.st_mode))
@@ -87,13 +98,13 @@ void			ft_cd_2(char *args[], t_shell *shell)
 		}
 		else
 		{
-			ft_putstr("cd: not a directory: ", 0);
+			ft_putstr("minishell: not a directory: ", 0);
 			ft_putstr(args[1], 1);
 		}
 	}
 	else
 	{
-		ft_putstr("cd: no such file or directory: ", 0);
+		ft_putstr("minishell: no such file or directory: ", 0);
 		ft_putstr(args[1], 1);
 	}
 	free(full_path);

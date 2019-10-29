@@ -12,6 +12,20 @@
 
 #include "../Includes/minishell.h"
 
+void			ft_help(void)
+{
+	ft_putstr("Available builtin commands:", 1);
+	ft_putstr("  echo", 1);
+	ft_putstr("  cd", 1);
+	ft_putstr("  env", 1);
+	ft_putstr("  setenv", 1);
+	ft_putstr("  unsetenv", 1);
+	ft_putstr("  color|colour", 1);
+	ft_putstr("  clear", 1);
+	ft_putstr("  prompt", 1);
+	ft_putstr("  exit", 1);
+}
+
 void			ft_echo(char **args, t_shell *shell)
 {
 	int			i;

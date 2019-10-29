@@ -16,14 +16,16 @@ int				is_unstandart(char **args, t_shell *shell)
 {
 	int			res;
 
-	res = 10;
+	res = 12;
 	(!ft_strcmp(args[0], "clear")) ? system("clear") : res--;
 	(!ft_strcmp(args[0], "exit")) ? exit(0) : res--;
+	(!ft_strcmp(args[0], "help")) ? ft_help() : res--;
 	(!ft_strcmp(args[0], "echo")) ? ft_echo(args, shell) : res--;
 	(!ft_strcmp(args[0], "colour")) ? ft_colour(args) : res--;
 	(!ft_strcmp(args[0], "color")) ? ft_colour(args) : res--;
 	(!ft_strcmp(args[0], "prompt")) ? ft_prompt(args, shell) : res--;
 	(!ft_strcmp(args[0], "env")) ? ft_env(shell) : res--;
+	(!ft_strcmp(args[0], "/usr/bin/env")) ? ft_env(shell) : res--;
 	(!ft_strcmp(args[0], "setenv")) ? ft_setenv(args, shell) : res--;
 	(!ft_strcmp(args[0], "unsetenv")) ? ft_unsetenv(args, shell) : res--;
 	(!ft_strcmp(args[0], "cd")) ? ft_cd(args, shell) : res--;
