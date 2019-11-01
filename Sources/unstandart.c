@@ -41,14 +41,14 @@ void		ft_prompt(char *args[], t_shell *shell)
 	{
 		if (parse_env("USER", shell, 0) && !(shell->is_path_prompt = 0))
 			shell->prompt = ft_strjoin(ft_strrenew(&shell->prompt,
-					parse_env("USER", shell, 0), 1), "% ", 1);
+					parse_env("USER", shell, 0), 1), "⇢  ", 1);
 		else
 			ft_putstr("An error occurred", 1);
 	}
 	else if (!ft_strcmp(args[1], "-path"))
 		ft_set_path_prompt(shell);
 	else if (!ft_strcmp(args[1], "-default") && !(shell->is_path_prompt = 0))
-		shell->prompt = ft_strrenew(&shell->prompt, "$> ", 1);
+		shell->prompt = ft_strrenew(&shell->prompt, "⇢  ", 1);
 	else
 		ft_put_prompt_usage();
 }

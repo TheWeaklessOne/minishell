@@ -12,6 +12,11 @@
 
 #include "../Includes/minishell.h"
 
+void			my_int(void)
+{
+	ft_putstr("\n⇢  ", 0);
+}
+
 int				main(int ac, char *av[], char *envp[])
 {
 	char		*command;
@@ -20,6 +25,7 @@ int				main(int ac, char *av[], char *envp[])
 	char		**comv;
 
 	system("clear");
+	signal(SIGINT, (void*)my_int);
 	shell_init(&shell, envp);
 	command = command_renew(&command, 0, &shell);
 	while (read(1, &c, 1))

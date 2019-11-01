@@ -19,7 +19,7 @@ void			ft_set_path_prompt(t_shell *shell)
 	if (!(str = getcwd(NULL, 0)))
 		on_crash(GETCWD_ERR);
 	free(shell->prompt);
-	shell->prompt = ft_strjoin(str, "% ", 1);
+	shell->prompt = ft_strjoin(str, "⇢  ", 1);
 	shell->is_path_prompt = 1;
 }
 
@@ -53,7 +53,7 @@ void			shell_init(t_shell *shell, char *envp[])
 
 	i = -1;
 	shell->is_path_prompt = 0;
-	shell->prompt = ft_strrenew(&shell->prompt, "$> ", 0);
+	shell->prompt = ft_strrenew(&shell->prompt, "⇢  ", 0);
 	shell->env_lst = NULL;
 	shell->path_lst = NULL;
 	shell->path = NULL;
