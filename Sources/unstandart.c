@@ -51,6 +51,7 @@ void		ft_prompt(char *args[], t_shell *shell)
 		shell->prompt = ft_strrenew(&shell->prompt, "⇢  ", 1);
 	else
 		ft_put_prompt_usage();
+	ft_put_prompt(shell->prompt);
 }
 
 void		ft_put_colour_usage(void)

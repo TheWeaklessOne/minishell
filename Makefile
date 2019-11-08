@@ -13,6 +13,7 @@ SRC  =	Sources/commands.c				\
 		Sources/list.c					\
 		Sources/cd.c					\
 		Sources/ft_split_whitespaces.c	\
+		Sources/readline.c				\
 
 OBJ  = $(SRC:.c=.o)
 
@@ -28,7 +29,7 @@ RESET= \033[0m
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	gcc $(FLAGS) $(OBJ) -o $(NAME)
+	gcc $(FLAGS) $(OBJ) -o $(NAME) -lreadline -ledit
 	@echo "$(GREEN)Project is successfully compiled$(RESET)"
 
 %.o : %.c
@@ -42,5 +43,5 @@ fclean: clean
 	@echo "$(RED)Suspending project files$(VIOLET)"
 	rm -rf $(OBJ)
 	rm -rf $(NAME)
-
+	@echo "$(RESET)"
 re: fclean all

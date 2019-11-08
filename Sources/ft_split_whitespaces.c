@@ -63,7 +63,7 @@ char	**ft_split_whitespaces(char *str)
 	i = 0;
 	j = 0;
 	if ((res = malloc(sizeof(char*) * (ft_nb_words(str) + 1))) == NULL)
-		return (NULL);
+		on_crash(MALLOC_ERR);
 	while (str[i])
 	{
 		while ((str[i] == '\t' || str[i] == ' ' || str[i] == '\n') && str[i])
@@ -72,7 +72,7 @@ char	**ft_split_whitespaces(char *str)
 		{
 			k = 0;
 			if ((res[j] = malloc(sizeof(char) * ft_ln_w(str, i) + 1)) == NULL)
-				return (NULL);
+				on_crash(MALLOC_ERR);
 			while (str[i] != '\t' && str[i] != ' ' && str[i] != '\n' && str[i])
 				res[j][k++] = str[i++];
 			res[j++][k] = '\0';

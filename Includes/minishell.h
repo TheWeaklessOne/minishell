@@ -26,12 +26,15 @@
 # include <sys/types.h>
 # include <sys/wait.h>
 # include <sys/stat.h>
+# include <readline/readline.h>
+# include <readline/history.h>
 
 # include "list.h"
 
 enum				e_error
 {
-	MALLOC_ERR = 1,
+	EOF_EXIT = 0,
+	MALLOC_ERR,
 	GETCWD_ERR
 };
 
@@ -45,24 +48,29 @@ typedef struct		s_shell
 	t_list			*lst_parse;
 }					t_shell;
 
+void				int_ignore(int signo);
+
 void				ft_set_path_prompt(t_shell *shell);
 int					is_unstandart(char **args, t_shell *shell);
 char				*enhance_command(char **command_ptr, char c);
 char				*command_renew(char **command, int to_free, t_shell *shell);
-void				do_command(char *command, t_shell *shell);
+void				do_command(char *command, char **envp, t_shell *shell);
 
 char				**ft_split_whitespaces(char *str);
-char				*ft_ignore_spaces(char *str, int to_free);
+void				ft_put_prompt(char *str);
 char				*ft_strchr(const char *s, int c);
 int					ft_strcmp(const char *s11, const char *s22);
 int					ft_strlen(const char *src);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strjoin(char const *s1, char const *s2, int to_free);
 void				ft_putstr(char const *str, int new_str);
+int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				**ft_free_split(char **d, int crash);
 char				*ft_strrenew(char **s_ptr, const char *new_s, int to_free);
 char				*ft_strstr(const char *s1, const char *s2);
 char				*ignore_quotation(char *str, int to_free);
+
+void				initialize_readline(void);
 
 void				ft_help(void);
 void				ft_echo(char **args, t_shell *shell);

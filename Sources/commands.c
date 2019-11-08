@@ -54,12 +54,13 @@ int				check_command(char **args, t_shell *shell)
 		return (1);
 }
 
-void			do_command(char *command, t_shell *shell)
+void			do_command(char *command, char **envp, t_shell *shell)
 {
 	char		**args;
 	pid_t		pid;
 
 	args = ft_split_whitespaces(command);
+	signal(SIGINT, (void*)int_ignore);
 	if (*args && !is_unstandart(args, shell))
 	{
 		if (check_command(args, shell))
@@ -68,7 +69,7 @@ void			do_command(char *command, t_shell *shell)
 			{
 				if (shell->path)
 					args[0] = ft_strjoin(shell->path->content, args[0], 2);
-				execve(args[0], args, NULL);
+				execve(args[0], args, envp);
 			}
 		}
 		else
@@ -110,6 +111,6 @@ char			*command_renew(char **command, int to_free, t_shell *shell)
 	if (!(ret = malloc(sizeof(char))))
 		return (on_crash(MALLOC_ERR));
 	ret[0] = '\0';
-	ft_putstr(shell->prompt, 0);
+	shell->prompt = shell->prompt;
 	return (ret);
 }
