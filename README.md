@@ -25,7 +25,7 @@ make
 - Project must be written in C in accordance with [the Norm](https://github.com/R4meau/minishell/blob/master/norme.en.pdf).
 - Program cannot have memory leaks.
 - No Segmentation fault, bus error, double free, etc.
-- This interpreter must display a prompt (a simple `$> ` for example) and wait till you type a command line, validated by pressing enter.
+- This interpreter must display a prompt (a simple `$> `  for example) and wait till you type a command line, validated by pressing enter.
 - The prompt is shown again only once the command has been completely executed.
 - The executable are those you can find in the paths indicated in the `PATH` variable.
 - In cases where the executable cannot be found, it has to show an error message and
